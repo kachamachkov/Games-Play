@@ -1,5 +1,13 @@
+import *  as gamesAPI from '../../api/games-api';
+import { useEffect, useState } from 'react';
 
 const GameList = () => {
+  const [games, setGames] = useState([]);
+
+  useEffect(() => {
+    gamesAPI.getAll()
+      .then(result => setGames(result));
+  }, []);
 
   return (
     <section id="catalog-page">
