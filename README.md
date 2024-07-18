@@ -14,3 +14,4 @@ SoftUni React Course Project
 * Intall react-router-dom
 * Setup react-router-dom
 * Add routes in App.jsx
+* Add link in the navigation

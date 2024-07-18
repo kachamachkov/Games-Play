@@ -1,25 +1,25 @@
 const GameCreate = () => {
   return (
-    <section id="register-page" className="content auth">
-      <form id="register">
+    <section id="create-page" className="auth">
+      <form id="create">
         <div className="container">
-          <div className="brand-logo"></div>
-          <h1>Register</h1>
 
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="maria@email.com" />
+          <h1>Create Game</h1>
+          <label htmlFor="leg-title">Legendary title:</label>
+          <input type="text" id="title" name="title" placeholder="Enter game title..." />
 
-          <label htmlFor="pass">Password:</label>
-          <input type="password" name="password" id="register-password" />
+          <label htmlFor="category">Category:</label>
+          <input type="text" id="category" name="category" placeholder="Enter game category..." />
 
-          <label htmlFor="con-pass">Confirm Password:</label>
-          <input type="password" name="confirm-password" id="confirm-password" />
+          <label htmlFor="levels">MaxLevel:</label>
+          <input type="number" id="maxLevel" name="maxLevel" min="1" placeholder="1" />
 
-          <input className="btn submit" type="submit" value="Register" />
+          <label htmlFor="game-img">Image:</label>
+          <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..." />
 
-          <p className="field">
-            <span>If you already have profile click <a href="#">here</a></span>
-          </p>
+          <label htmlFor="summary">Summary:</label>
+          <textarea name="summary" id="summary"></textarea>
+          <input className="btn submit" type="submit" value="Create Game" />
         </div>
       </form>
     </section>
