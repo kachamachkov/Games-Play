@@ -1,0 +1,18 @@
+{
+  "0b7a6559-6cfe-47bd-951b-f309b8af6e17": {
+    "title": "Satisfactory",
+    "category": "Automation",
+    "maxLevel": "10",
+    "imageUrl": "https://cdn1.epicgames.com/offer/crab/2560x1440_servers_2560x1440-cbab1bb64d81a75bc992458cc9ffda08?h=270&quality=medium&resize=1&w=480",
+    "summary": "It is a 3D first-person open world exploration and factory building game. The player, a pioneer, is dropped onto an alien planet with a handful of tools and must harvest the planet's natural resources to construct increasingly complex factories for automating all resource needs.",
+    "_id": "0b7a6559-6cfe-47bd-951b-f309b8af6e17"
+  },
+  "f5436039-6d7a-49e4-b919-2f7f43ca0c70": {
+    "title": "EVE online",
+    "category": "Space Simulator",
+    "maxLevel": "11",
+    "imageUrl": "hhttps://images.ctfassets.net/7lhcm73ukv5p/7xNXLON1euJdb8KcI2YKem/0404fc69d3d97b7990b216264150da60/Web_Meta_Image_EN_1200x630.png",
+    "summary": "Set more than 21,000 years in the future, the background story of Eve Online explains that humanity, having used up most of Earth's resources through centuries of explosive population growth, began colonizing the rest of the Milky Way.",
+    "_id": "f5436039-6d7a-49e4-b919-2f7f43ca0c70"
+  }
+}

@@ -20,6 +20,9 @@ SoftUni React Course Project
 * Service layer architecture
 * Abstract requester
 * Add games api
+* Pre-seed practice server with Games data
 
-## 3. Page implementations
+## 4. Page implementations
 * Game list
+* Details
+* Home
