@@ -7,7 +7,8 @@ SoftUni React Course Project
 * Add base vite react project as client
 * Clean up client
 * Add project resources
-* Separate html into static components
+* Convert HTML to JSX
+* Separate HTML into static components
 
 ## 2. React Router
 * Intall react-router-dom

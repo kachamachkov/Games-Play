@@ -1,10 +1,16 @@
+import Header from "./components/header/Header";
+import Home from "./components/home/Home";
 
 function App() {
 
     return (
-        <>
-            <h1>hi</h1>
-        </>
+        <div className="box">
+            <Header />
+
+            <main id="main-content">
+                <Home />
+            </main>
+        </div>
     );
 }
 
