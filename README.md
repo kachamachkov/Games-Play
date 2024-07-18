@@ -15,3 +15,10 @@ SoftUni React Course Project
 * Setup react-router-dom
 * Add routes in App.jsx
 * Add link in the navigation
+
+## 3. Create Service Layer
+* Service layer architecture
+* Abstract requester
+
+## 3. Page implementations
+* Game list
