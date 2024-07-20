@@ -25,4 +25,7 @@ SoftUni React Course Project
 ## 4. Page implementations
 * Game list
 * Details
+  * Details link
+  * Details route
+  * Api function - getOne
 * Home
