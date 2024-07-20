@@ -34,3 +34,5 @@ SoftUni React Course Project
 * Create service for nested resource `comments`
 * POST comment to server
 * Read comments from server
+* Dynamically update comments in the component
+* Clear form

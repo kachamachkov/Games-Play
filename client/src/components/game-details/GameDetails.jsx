@@ -20,7 +20,19 @@ const GameDetails = () => {
     const commentSubmitHandler = async (e) => {
         e.preventDefault();
 
-        await commentsApi.create(gameId, username, comment);
+        const newComment = await commentsApi.create(gameId, username, comment);
+
+        // TODO: this should be refactored
+        setGame(prevState => ({
+            ...prevState,
+            comments: {
+                ...prevState.comments,
+                [newComment._id]: newComment, //property == id, dynamic property in the literal
+            }
+        }));
+
+        setUsername('');
+        setComment('');
     };
 
     return (
@@ -41,16 +53,18 @@ const GameDetails = () => {
                 <div className="details-comments">
                     <h2>Comments:</h2>
                     <ul>
-                        {/* <!-- list all comments for current game (If any) --> */}
-                        <li className="comment">
-                            <p>Content: I rate this one quite highly.</p>
-                        </li>
-                        <li className="comment">
-                            <p>Content: The best game.</p>
-                        </li>
+                        {Object.keys(game.comments || {}).length > 0
+                            ? Object.values(game.comments).map(comment => (
+                                <li key={comment._id} className="comment">
+                                    <p>{comment.username}: {comment.text}</p>
+                                </li>
+                            ))
+                            : <p className="no-comment">No comments.</p>
+                        }
                     </ul>
-                    {/* <!-- Display paragraph: If there are no games in the database --> */}
-                    <p className="no-comment">No comments.</p>
+
+
+
                 </div>
 
                 {/* <!-- Edit/Delete buttons ( Only for creator of this game )  --> */}
