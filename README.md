@@ -28,4 +28,5 @@ SoftUni React Course Project
   * Details link
   * Details route
   * Api function - getOne
+  * Comments
 * Home
