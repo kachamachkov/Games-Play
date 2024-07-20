@@ -28,5 +28,9 @@ SoftUni React Course Project
   * Details link
   * Details route
   * Api function - getOne
-  * Comments
 * Home
+
+## 5. Comments
+* Create service for nested resource `comments`
+* POST comment to server
+* Read comments from server
