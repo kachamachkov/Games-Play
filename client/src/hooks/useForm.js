@@ -3,7 +3,7 @@ import { useState } from 'react';
 export function useForm(initialValues, submitCallback) {
     const [values, setValues] = useState(initialValues);
 
-    // TODO: add checkbox forms support
+    // TODO: add checkbox field support
     const changeHandler = (e) => {
         setValues(state => ({
             ...state,
@@ -11,7 +11,7 @@ export function useForm(initialValues, submitCallback) {
         }));
     };
 
-    const submitHandler = () => {
+    const submitHandler = (e) => {
         e.preventDefault();
 
         submitCallback(values);
@@ -22,4 +22,4 @@ export function useForm(initialValues, submitCallback) {
         changeHandler,
         submitHandler
     };
-}                          
+}
