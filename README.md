@@ -38,9 +38,9 @@ SoftUni React Course Project
 * Clear form
 
 ## 6. API custom hooks
+* Form Hook
 * GameAPI Hooks
 * Comment Hooks
-* Form Hook
 
 ## 7. Authentication
 * Auth API
@@ -55,3 +55,4 @@ SoftUni React Course Project
 * Create game
   * API function
   * Create Hook 
+* Latest Games
