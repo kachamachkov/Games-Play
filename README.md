@@ -45,7 +45,12 @@ SoftUni React Course Project
 ## 7. Authentication
 * Auth API
   * Login
+  * Register
+  * Logout
 * Auth API hook
+  * Login
+  * Register
+  * Logout
 * Auth state & context
 * Login
 * Register
