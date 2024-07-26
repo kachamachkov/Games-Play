@@ -1,28 +1,94 @@
+import { useForm } from "../../hooks/useForm";
+import { useCreateGame } from "../../hooks/useGames";
+import { useNavigate } from 'react-router-dom';
+
+const initialValues = {
+    title: '',
+    category: '',
+    maxLevel: '',
+    imageUrl: '',
+    summary: '',
+};
+
 const GameCreate = () => {
-  return (
-    <section id="create-page" className="auth">
-      <form id="create">
-        <div className="container">
+    const navigate = useNavigate();
+    const createGame = useCreateGame();
 
-          <h1>Create Game</h1>
-          <label htmlFor="leg-title">Legendary title:</label>
-          <input type="text" id="title" name="title" placeholder="Enter game title..." />
+    const createHandler = async (values) => {
+        try {
+            const { _id: gameId } = await createGame(values);
 
-          <label htmlFor="category">Category:</label>
-          <input type="text" id="category" name="category" placeholder="Enter game category..." />
+            navigate(`/games/${gameId}/details`);
+        } catch (err) {
+            // TODO: set error state and display error
+            console.error(err.message);
 
-          <label htmlFor="levels">MaxLevel:</label>
-          <input type="number" id="maxLevel" name="maxLevel" min="1" placeholder="1" />
+        }
+    };
 
-          <label htmlFor="game-img">Image:</label>
-          <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..." />
+    const {
+        values,
+        changeHandler,
+        submitHandler
+    } = useForm(initialValues, createHandler);
+    return (
+        <section id="create-page" className="auth">
+            <form id="create" onSubmit={submitHandler}>
+                <div className="container">
 
-          <label htmlFor="summary">Summary:</label>
-          <textarea name="summary" id="summary"></textarea>
-          <input className="btn submit" type="submit" value="Create Game" />
-        </div>
-      </form>
-    </section>
-  );
+                    <h1>Create Game</h1>
+                    <label htmlFor="leg-title">Legendary title:</label>
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        placeholder="Enter game title..."
+                        value={values.title}
+                        onChange={changeHandler}
+                    />
+
+                    <label htmlFor="category">Category:</label>
+                    <input
+                        type="text"
+                        id="category"
+                        name="category"
+                        placeholder="Enter game category..."
+                        value={values.category}
+                        onChange={changeHandler}
+                    />
+
+                    <label htmlFor="levels">MaxLevel:</label>
+                    <input
+                        type="number"
+                        id="maxLevel"
+                        name="maxLevel"
+                        min="1"
+                        placeholder="1"
+                        value={values.maxLevel}
+                        onChange={changeHandler}
+                    />
+
+                    <label htmlFor="game-img">Image:</label>
+                    <input
+                        type="text"
+                        id="imageUrl"
+                        name="imageUrl"
+                        placeholder="Upload a photo..."
+                        value={values.imageUrl}
+                        onChange={changeHandler}
+                    />
+
+                    <label htmlFor="summary">Summary:</label>
+                    <textarea name="summary" id="summary" value={values.summary} onChange={changeHandler}></textarea>
+                    <input
+                        className="btn submit"
+                        type="submit"
+                        value="Create Game"
+
+                    />
+                </div>
+            </form>
+        </section>
+    );
 };
 export default GameCreate;
