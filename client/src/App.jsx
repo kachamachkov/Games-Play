@@ -19,6 +19,7 @@ function App() {
     };
 
     const contextData = {
+        userId: authState._id,
         email: authState.email,
         accessToken: authState.accessToken,
         isAuthenticated: !!authState.email, //truthy == true ; falsey == false ; if there is email in authState, you're auth'ed
