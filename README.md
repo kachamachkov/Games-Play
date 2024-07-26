@@ -52,9 +52,11 @@ SoftUni React Course Project
   * Register
   * Logout
 * Auth state & context
+* Token management
 * Login
 * Register
 * Logout
+* Authorized Requests
 
 ## 8. UI Implmentaion
 * Dynamic Navigation
