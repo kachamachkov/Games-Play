@@ -55,6 +55,7 @@ SoftUni React Course Project
 * Token management
 * Login
 * Register
+  * Add form validation
 * Logout
 * Authorized Requests
 
